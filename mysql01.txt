@@ -1,0 +1,49 @@
+mysql连接方式：
+	1.dos： mysql -u root -p
+	2.mysql-dos: 输入密码
+	3.navicat:建立连接
+
+数据库操作：database
+	创建： create database 你自己起个名称;
+	删除： drop database 数据库名字;
+	查询： show databases;
+	使用： use 数据库名字;
+
+创建一个学生表：
+	学生编号、姓名、年龄、性别、出生日期、电话号码
+
+create table student(
+  #学生编号、姓名、年龄、性别、出生日期、电话号码
+  # 字段名  类型 [属性] 
+  stuId int(4) not null,
+  stuName varchar(20) not null,
+  stuAge int(2) default 20,
+  stuSex varchar(1) default '男',
+  stuBirthday datetime,
+  # stuBirthday timestamp default now(),  默认日期为当前系统时间
+  stuPhone varchar(11)
+
+);
+
+
+create table student3(
+  #学生编号、姓名、年龄、性别、出生日期、电话号码
+  # 字段名  类型 [属性] 
+  stuId int(4) primary key, #主键约束：not null + 唯一
+  stuName varchar(20) not null,
+  stuAge int(2) default 20,
+  stuSex varchar(1) default '男',
+  stuBirthday datetime,
+  # stuBirthday timestamp default now(),  默认日期为当前系统时间
+  stuPhone varchar(11)
+
+);
+
+课后作业：
+
+  创建shop数据库，
+  库中创建两张表：商品表和类型表
+   商品表（商品编码[主键]，商品名称，商品类型，商品价格，商品的数量，商品的描述信息，生产日期(默认系统当前时间)）
+   类型表（类型编号[主键],类型名称）
+
+   SQL命令自行总结，多加练习。
